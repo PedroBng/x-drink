@@ -1,0 +1,79 @@
+ion-header ion-toolbar{
+    --background: #FFE7E0;
+    --border-radius: 0 0px 32% 40%;
+    --padding: 5%;
+  }
+  
+  ion-back-button{
+    --position: absolute;
+    --top: 2%;
+    --color: #E85E37;
+   
+  }
+  ion-header h5{
+    text-align: center;
+    color: orangered;
+    font-size: 15px;
+  }
+  
+  h3{
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1.5;
+    margin: 15% 2%;
+  }
+  
+  
+  #container {
+    text-align: center;
+    margin: 10% 5%;
+  }
+  ion-progress-bar {
+  
+    --buffer-background: #FFE7E0;
+    --progress-background: orangered;
+    border-radius: 15px;
+    height: 7px;
+  }
+  ion-grid{
+    margin: 0 20%;
+  }
+  ion-grid p{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+  }
+  ion-grid ion-input{
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
+  ion-grid ion-input:focus{
+    border: 1px solid orangered;
+    color: orangered;
+  }
+  ion-button{
+    text-transform: uppercase;
+    --background: linear-gradient(orange, orangered) !important;
+    --border-radius: 10px;
+    margin:  0 5%;
+    font-weight: 400;
+    margin: 32% 0 0 0;
+  }
+  
+  ion-footer{
+      bottom: 10%;
+      text-align: center;
+    }
+    ion-footer p{ 
+      font-size: 10px !important;
+      line-height: 22px !important;
+      color: #000 !important;
+    }
+    ion-footer span{
+      text-decoration: none;
+      color: orangered;
+    }

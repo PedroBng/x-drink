@@ -1,0 +1,150 @@
+
+ion-toolbar ion-icon, ion-menu-button{
+    color: white;
+}
+ion-searchbar{
+   color: #0000;
+   --placeholder-color: #000;
+   --icon-color: #000;
+   padding: 0;
+   --border-radius: 10px;
+   
+}
+ion-title{
+   color: #FFFF;
+}
+p{
+   font-size: 13px;
+}
+
+ion-segment{
+   border-radius: 10px;
+   background-color: var(--ion-color-medium);
+
+   ion-segment-button{
+       --color-checked: white;
+       --background-checked: var(--ion-color-secondary);
+       border-radius: 10px;
+   }
+   ion-label{
+       font-size: 11px;
+   }
+}
+.filter-tab{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.filter-date{
+   display: flex;
+   margin: 7px;
+   justify-content: space-evenly;
+   align-items: center;
+   color: var(--ion-color-secondary);
+   .date-line{
+       display: inline-block;
+       height: 1px;
+       width: 30%;
+       background-color: var(--ion-color-secondary);
+
+   }
+}
+.filter{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 150px;
+   padding: 2px;
+   padding-left: 5px;
+   padding-left: 5px;
+   border: 1px solid rgba(190, 190, 190, 0.473);
+   border-radius: 5px;
+   font-size: 10px;
+
+   ion-icon[name="calendar"] {
+       margin-right: 5px;
+       color: var(--ion-color-secondary);
+   }
+   .filter-btn{
+       display: flex;
+       flex-direction: column;
+
+       ion-icon{
+           margin: 0px !important;
+       }
+   }
+}
+.title{
+   color: var(--ion-color-secondary);
+   padding: 15px;
+   font-size: 19px;
+}
+.compte{
+   padding: 25px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: transparent linear-gradient(180deg, #E6A930 0%, #E77F34 56%, #E85E37 100%) 0% 0% no-repeat padding-box !important;
+   color: white;
+
+   .left{
+       display: flex;
+       justify-content: start;
+       .texte{
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between; 
+       }
+   }
+   .right{
+       ion-button{
+           --border-radius: 10px;
+           color: var(--ion-color-primary);
+           --background: white;
+           font-size: 11px;
+       }
+   }
+}
+
+.line{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border: 0.5px solid rgba(156, 154, 154, 0.24);
+   width: 100%;
+}
+.transaction-list{
+   padding: 10px;
+
+   .one-transaction{
+       display: flex;
+       justify-content: space-between;
+       font-size: small;
+
+       .trans-note{
+           color: rgba(100, 100, 100, 0.678);
+       }
+       .left{
+           display: flex;
+           flex-direction: column;
+       }
+       .right{
+           text-align: right;
+           .trending{
+               font-size: 17px;
+               font-weight: bold;
+               display: flex;
+               align-items: center;
+               
+               ion-icon{
+                   margin-right: 5px;
+               }
+           }
+           .down{
+               color: green;
+           }
+           .up{
+               color: var(--ion-color-secondary);
+           }
+       }
+   }
+}

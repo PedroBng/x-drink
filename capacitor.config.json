@@ -1,0 +1,14 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "xdrink",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "linuxAndroidStudioPath": "/home/qadir/android-studio/bin/studio.sh"
+}

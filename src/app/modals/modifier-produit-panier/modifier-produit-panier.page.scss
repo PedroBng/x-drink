@@ -1,0 +1,32 @@
+.title{
+    color: var(--ion-color-secondary);
+    margin: 7px;
+    margin-top: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 40%;
+    margin-top: 10px;
+
+    ion-badge{
+        height: 25px;
+        width: 25px;
+        background-color: white;
+        color:  var(--ion-color-secondary);
+        border: 1px solid var(--ion-color-secondary);
+    }
+}
+ion-input, ion-datetime, ion-select{
+    border: 1px solid grey;
+    border-radius: 7px;
+    font-size: 10px;
+    width: 100%;
+    margin: 10px 0 5px;
+    padding: 2% 3% !important;
+}
+ion-input:active{
+    border: 1px solid #E85E37 !important;
+}

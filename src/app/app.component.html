@@ -1,0 +1,93 @@
+<ion-app>
+  <ion-menu side="end" menuId="client" contentId="main">
+    <ion-content class="menu-content">
+      <div id="profil" class="-background">
+        <ion-avatar>
+          <img src="../assets/images/avatar@2x.png">
+        </ion-avatar>
+        <h1> {{pseudo}} </h1>
+        <h3> {{email}} </h3>
+      </div>
+
+      <ion-menu-toggle>
+        <div routerLink="/historiques-client" class="menu-item">
+          <ion-icon slot="start" name="reader-outline"></ion-icon>
+          <ion-label>Mes historiques</ion-label>
+        </div>
+      </ion-menu-toggle>
+
+      <div *ngIf="userType=='client'" routerLink="/adresse-client" class="menu-item">
+        <ion-icon name="location-outline"></ion-icon>
+        <ion-label>Mon adresse</ion-label>
+      </div>
+      <ion-menu-toggle>
+        <div *ngIf="userType=='vendeur'" routerLink="/adresse-client" class="menu-item">
+          <ion-icon name="location-outline"></ion-icon>
+          <ion-label>Performance</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div *ngIf="userType=='vendeur'" routerLink="/adresse-client" class="menu-item">
+          <ion-icon name="stats-chart"></ion-icon>
+          <ion-label>Mes statistiques</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div class="menu-item" lines="none" routerLink="/qrcode">
+          <ion-icon name="wallet-outline"></ion-icon>
+          <ion-label>Qr Code</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div class="menu-item" lines="none" routerLink="/portfeuil-client">
+          <ion-icon name="wallet-outline"></ion-icon>
+          <ion-label>Portfeuil</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div class="menu-item" lines="none" routerLink="/langues-client">
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+          <ion-label>Langues</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div class="menu-item" routerLink="/assistance-client">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <ion-label>Assistance</ion-label>
+        </div>
+      </ion-menu-toggle>
+
+      <div class="menu-list2">
+        <ion-menu-toggle>
+          <div class="menu-item" lines="none" routerLink="/about">
+            <ion-label>A propos</ion-label>
+          </div>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <div class="menu-item" lines="none" routerLink="/politique">
+            <ion-label>Politique de confidentialité</ion-label>
+          </div>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <div class="menu-item" lines="none" routerLink="/questions">
+            <ion-label>Questions fréquentes</ion-label>
+          </div>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <div class="menu-item" lines="none" routerLink="/information-apk">
+            <ion-label>Informations sur l'application</ion-label>
+          </div>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <div class="menu-item" lines="none" routerLink="/connexion-client">
+            <ion-icon slot="start" name="log-out-outline"></ion-icon>
+            <ion-label (click)="deconnexion()">Déconnexion</ion-label>
+          </div>
+
+        </ion-menu-toggle>
+      </div>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

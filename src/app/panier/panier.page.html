@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title color="light" ><strong>Mon panier</strong></ion-title>
+    <ion-buttons slot="end">
+      <ion-button  >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="ellipsis-vertical-outline" color="light" ></ion-icon>      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <div *ngFor="let item of cart" class="cart-element">
+      <div class="left">
+        <img [src]="item.img" alt="" srcset="">
+        <div class="product-name">
+          <span>{{item.name}}</span>
+          <span class="buttons" >
+            <ion-badge (click)="decrease(item)" >-</ion-badge>
+            <strong *ngIf="inputQty==false" (click)="inputQty=true" > {{item.qty? item.qty:1}} </strong>
+            <ion-input type="number" (input)="inputChange($event.target.value, item)" [(ngModel)]="item.qty" *ngIf="inputQty==true" > </ion-input>
+
+            <ion-badge (click)="increase(item)" >+</ion-badge>
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <strong class="amount" >{{item.amount}}</strong>
+        <span (click)="delete(item)" class="delete"><ion-icon name="trash" ></ion-icon></span>
+      </div>
+    </div>
+    <br><br>
+    <div class="total">
+      <div class="total-left">
+        <strong class="total">Total <strong class="total-amount" >{{total}} Fr</strong></strong>
+        
+      </div>
+      <ion-button [routerLink]="['/livraison-client']" routerLinkActive="router-link-active"  class="outline-btn gradient-btn">Payer</ion-button>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,54 @@
+
+
+<ion-content>
+
+<div class="background">
+  <div>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <h5>Creation de compte</h5>
+      <h3>Client : Particuliers</h3>
+    </ion-title>
+  </div>
+</div>
+  <div id="container">
+    <ion-progress-bar  value="0.8"></ion-progress-bar>
+    
+    <ion-list>
+      <ion-item class="ion-no-border" >
+        <ion-label position="stacked">Nom</ion-label>
+        <ion-input [(ngModel)]="dataParticulier.nom" type="text" placeholder="nom"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label position="stacked">Prénom</ion-label>
+        <ion-input [(ngModel)]="dataParticulier.prenoms" type="text" placeholder="prénom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Numéro tel du gérant</ion-label>
+        <ion-input [(ngModel)]="dataParticulier.telephone" type="tel" placeholder="numéro tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input [(ngModel)]="dataParticulier.email" type="email" placeholder="fxparticulier@gmail.com"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Mot de passe</ion-label>
+        <ion-input [(ngModel)]="dataParticulier.password" type="password" placeholder="**********"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Confirmer le mot de passe</ion-label>
+        <ion-input [(ngModel)]="dataParticulier.password2" type="password" placeholder="**********"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button class="outline-btn gradient-btn" expand="block" (click)="soumettre()">Créer le compte</ion-button>
+
+    <span> {{errorMessage}} </span>
+
+  </div>
+  
+</ion-content>
+
+
+

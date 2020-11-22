@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications" routerLink="/notifications-client"></ion-icon>
+      <ion-menu-button menu="client"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title><strong>Mon portfeuil</strong></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="compte ">
+    <div class="left">
+      <ion-icon name="persone" ></ion-icon>
+      <span class="texte" >
+        <span>Solde</span>
+        <strong class="money">15 000 FCFA</strong>
+      </span>
+    </div>
+    <div class="right">
+      <ion-button >Recharger</ion-button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <strong >Transactions</strong>
+    </div>
+    <br>
+    <ion-segment >
+      <ion-segment-button  value="tout">
+        <ion-label>Toutes</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="recharge">
+        <ion-label>Recharge</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="paiement">
+        <ion-label>Paiement</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <br>
+    <div class="filter-tab">
+      <div class="filter">
+        <div>
+          <ion-icon name="calendar" ></ion-icon>
+          <span>Choisir une date</span>
+        </div>
+        <div class="filter-btn">
+          <ion-icon name="caret-up-outline"></ion-icon>
+          <ion-icon name="caret-down-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="filter">
+        <div>
+          <ion-icon name="calendar" ></ion-icon>
+          <span>Choisir une date</span>
+        </div>
+        <div class="filter-btn">
+          <ion-icon name="caret-up-outline"></ion-icon>
+          <ion-icon name="caret-down-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <span style="color: rgba(122, 122, 122, 0.671); font-size: 11px;" >Selectionner deux dates différentes pour les transactions</span>
+
+    <div class="filter-date">
+      <span class="date-line" ></span>
+      <span class="texte" >
+        <span >Aujourd'hui</span>
+      </span>
+      <span class="date-line" ></span>
+    </div>
+
+    <div class="transaction-list">
+      <div *ngFor="let item of [1,2,3,4,5]" >
+        <div *ngIf="item%2==0" class="filter-date">
+          <span class="date-line" ></span>
+          <span class="texte" >
+            <span >{{'2'+item}} Juillet 2020</span>
+          </span>
+          <span class="date-line" ></span>
+        </div>
+
+        <div class="one-transaction">
+          <div class="left">
+            <strong>Paiement commande 001254</strong>
+            <span class="trans-note" >Paiement commande 001254</span>
+            <span class="trans-note" >15:00</span>
+          </div>
+          <div class="right">
+            <div *ngIf="item%3==0" class="trending up">
+              <ion-icon name="trending-up-outline"></ion-icon>
+              14000
+            </div>
+            <div *ngIf="item%3!=0" class="trending down">
+              <ion-icon name="trending-down-outline"></ion-icon>
+              14000
+            </div>
+            <span class="trans-note" >Solde 15000</span>
+          </div>
+        </div>
+        <div class="line"></div>
+  
+      </div>
+    </div>
+  </div>
+</ion-content>

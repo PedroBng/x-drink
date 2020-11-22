@@ -1,0 +1,23 @@
+
+
+<ion-content>
+  <div class="content" style="padding: 20px;" >
+    <strong class="title" >Moyen de paiement</strong>
+  </div>
+
+  <div class="list">
+    <ion-item (click)="valider('moov-money')" lines="none">
+      <ion-title  position="floating">Moov money</ion-title>
+    </ion-item>
+    <ion-item  (click)="valider('mtn-money')" lines="none">
+      <ion-title  position="floating">Mobile money</ion-title>
+    </ion-item>
+    <ion-item (click)="valider('visa')" lines="none">
+      <ion-title  position="floating">Visa</ion-title>
+    </ion-item>
+  </div>
+  <br>
+  <div class="footer-btn" >
+    <ion-button class="outline-btn gradient-btn" expand="block" (click)="valider('')" >Valider</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,55 @@
+.header-img{
+    width: 100%;
+    height: 200px;
+}
+ion-content{
+    text-align: center;
+    margin: auto;
+}
+ion-content ion-img{
+    width: 35%;
+    margin: 0 30%;
+}
+
+p{
+    text-align: center;
+    color: var(--ion-color-secondary);
+    font-size: 25px;
+}
+.btn{
+    margin: 10% 0;
+}
+ion-button{
+    --border-radius: 10px;
+    font-weight: 100;
+}
+.sign{
+    --background: linear-gradient(orange, orangered) !important;
+    --border-radius: 10px;
+    margin: 0 20%;
+    --color: white;
+}
+.login{
+    margin: 5% 23%;
+    --color: orangered;
+    --border-color: orangered;
+}
+
+.bg{
+    // background : url("../../assets/images/Component.png");
+    // background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.back-img{
+    width: 100%;
+    height: 200px;
+    z-index: 0;
+}
+.front-img{
+    position: absolute;
+    width: 150px;
+    z-index: 999999;
+    margin-top: 35px;
+}

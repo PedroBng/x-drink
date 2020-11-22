@@ -1,0 +1,75 @@
+<ion-header >
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button  >
+        <ion-back-button></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Rechercher un produit" ></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button  >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="ellipsis-vertical-outline" color="light" ></ion-icon>      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-segment scrollable >
+      <ion-segment-button *ngFor="let item of categories" [value]="item">
+        <ion-label>{{item}}</ion-label>
+      </ion-segment-button>
+      
+    </ion-segment>
+
+    <div class="list">
+      <ion-grid>
+        <ion-row >
+          <ion-col size="6" *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+            <div (click)="select(item)" class="product-card"  >
+              <div class="image-btn">
+                <span *ngIf="isSelected(item)" class="selected"> 
+                  <ion-icon name="checkmark-sharp"></ion-icon>
+                </span>
+                <span class="prix" >500F</span>
+                <img src="https://picsum.photos/200" alt="" srcset="">
+              </div>
+              <div class="name-icon">
+                <span class="product-name">Nom du produit</span> <ion-icon name="bag-handle-outline" ></ion-icon>
+                <strong class="product-name">14</strong> 
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button class="gradient-btn" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+        <div class="list-option">
+          <div (click)="hors_ligne()" class="option">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <span>Enregistrer vente hors ligne</span>
+          </div>
+          <div (click)="en_ligne()" class="option">
+            <ion-icon name="log-in-outline"></ion-icon>
+            <span>Enregistrer vente en ligne</span>
+          </div>
+        </div>
+    </ion-fab-list>
+  </ion-fab>
+  
+</ion-content>
+
+<ion-footer *ngIf="selectedItem.length !=0">
+  <ion-button [routerLink]="['/vendeur-panier-stock']" routerLinkActive="router-link-active"  (click)="validate()" expand='full' class="gradient-btn" >  
+    valider
+  </ion-button>
+</ion-footer>

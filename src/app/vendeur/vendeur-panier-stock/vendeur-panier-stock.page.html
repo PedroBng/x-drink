@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title color="light" ><strong>Mon panier stock</strong></ion-title>
+    <ion-buttons slot="end">
+      <ion-button  >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="ellipsis-vertical-outline" color="light" ></ion-icon>      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <div *ngFor="let item of produit_panier" class="cart-element">
+      <div class="left">
+        <img src="https://picsum.photos/200" alt="" srcset="">
+        <div class="product-name">
+          <span>Nom du produit</span>
+          <span class="buttons" (click)="openModal(item)" >
+            <ion-badge>-</ion-badge>
+            <strong>5</strong>
+            <ion-badge>+</ion-badge>
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <strong class="amount" >500</strong>
+        <span class="delete"><ion-icon name="trash" ></ion-icon></span>
+      </div>
+    </div>
+    <br><br>
+    <div class="total">
+      
+      <ion-button style="width: 80%;" class="outline-btn gradient-btn">Mettre à jour stock</ion-button>
+    </div>
+  </div>
+
+</ion-content>

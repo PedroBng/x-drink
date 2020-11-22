@@ -1,0 +1,26 @@
+<ion-tabs (ionTabsDidChange)="changed($event)">
+
+  <ion-tab-bar slot="bottom" >
+    <ion-tab-button tab="accueil">
+       <span *ngIf="isActive(TABS.ACCUEIL)" class="active">
+         <ion-icon name="home-outline"></ion-icon> Accueil
+        </span>
+        <ion-icon *ngIf="!isActive(TABS.ACCUEIL)" name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="geolocalisation">
+      <span *ngIf="isActive(TABS.GEOLOCALISATION)" class="active">
+        <ion-icon name="calendar-outline"></ion-icon> Géolocalisation
+       </span>
+      <ion-icon *ngIf="!isActive(TABS.GEOLOCALISATION)" name="calendar-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profil">
+      <span *ngIf="isActive(TABS.PROFIL)" class="active">
+        <ion-icon name="person-outline"></ion-icon> Profil
+       </span>
+      <ion-icon *ngIf="!isActive(TABS.PROFIL)" name="person-outline"></ion-icon>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>

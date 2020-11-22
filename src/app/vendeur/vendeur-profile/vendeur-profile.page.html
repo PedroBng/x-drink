@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications" routerLink="/notifications-client"></ion-icon>
+      <ion-menu-button menu="client"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title><strong>Mon profil</strong></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="content">
+    <div class="profile-info">
+      <ion-avatar>
+        <img src="/assets/images/avatar@2x.png">
+      </ion-avatar>
+      <div class="names">
+        <div style="display: flex; flex-direction: column;">
+          <span class="name">A. Gratien Salomon</span>
+          <span>aureline@gmail.com</span>
+        </div>
+        <ion-button class="gradient-btn">Modifier</ion-button>
+      </div>
+    </div>
+
+    <div *ngIf="userType=='client'" class="commandes">
+      <div class="header">
+        <strong class="title">Mes commandes</strong>
+      </div>
+      <div style="padding: 5px;" >
+        <div class="commande-content">
+          <div *ngFor="let item of [1,2]" class="cart-element">
+            <div class="left">
+              <img src="https://picsum.photos/200" alt="" srcset="">
+              <div class="product-name">
+                <span>Nom du produit</span>
+                <span class="buttons">
+                  3 unités
+                </span>
+              </div>
+            </div>
+            <div class="right">
+              <strong class="amount">500</strong>
+              <span class="delete">
+                <span style="color: red; font-size: 11px; margin-right: 5px;">En attente</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <ion-button [routerLink]="['/historiques-client']" class="gradient-btn">Voir plus</ion-button>
+      </div>
+    </div>
+
+    <div *ngIf="userType=='vendeur'" class="commandes">
+      <div class="header">
+        <strong class="title">Mes livraisons</strong>
+      </div>
+      <div style="padding: 5px;" >
+        <div class="commande-content">
+          <div *ngFor="let item of [1,2,2,3,4,5]" class="livraison-element">
+            
+            <span class="cmd">Cmd #12368</span>
+            <div>
+              <strong *ngIf="item%2==0" class="status" style="color: red;" >En attente</strong>
+              <strong *ngIf="item%2!=0" class="status" style="color: green;">Reçu</strong>
+              <ion-button class="gradient-btn">Voir plus</ion-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <ion-button [routerLink]="['/historiques-client']" routerLinkActive="router-link-active"  class="gradient-btn">Voir plus</ion-button>
+      </div>
+    </div>
+    <br><br>
+
+    <div class="options">
+      <div routerLink="" class="menu-item">
+        <div>
+          <ion-icon name="share-social-outline"></ion-icon>          
+          <ion-label>Inviter des amis</ion-label>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+
+      <div routerLink="" class="menu-item">
+        <div>
+          <ion-icon name="help-outline"></ion-icon>          
+          <ion-label>Assistance</ion-label>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+
+      <div routerLink="" class="menu-item">
+        <div>
+          <ion-icon name="information-outline"></ion-icon>         
+          <ion-label>Suggestions</ion-label>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+      
+    </div>
+  </div>
+</ion-content>

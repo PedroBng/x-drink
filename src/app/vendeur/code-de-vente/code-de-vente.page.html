@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" >
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" ><strong>Mon panier stock</strong></ion-title>
+    <ion-buttons slot="end">
+      <ion-button  >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="ellipsis-vertical-outline" color="light" ></ion-icon>      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="validation">
+    <div id="container">
+      <p>Veuillez entrer le code de la commande 1</p>
+      <div class="cases">
+        <ion-input type="number" max="1"></ion-input>
+        <ion-input type="number" max="1"></ion-input>
+        <ion-input type="number" max="1"></ion-input>
+        <ion-input type="number" max="1"></ion-input>
+        <ion-input type="number" max="1"></ion-input>
+
+      </div>
+
+      <div class="footer-btn">
+        <ion-button class="outline-btn gradient-btn" expand="block" [routerLink]="['/vendeur-panier']"
+          routerLinkActive="router-link-active">Servir</ion-button>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

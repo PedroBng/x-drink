@@ -1,0 +1,23 @@
+
+
+<ion-content>
+  <div class="content" style="padding: 20px;" >
+    <strong class="title" >Lieux de livraison</strong>
+  </div>
+  <ion-item lines="none">
+    <ion-input disabled class="input" type="text" placeholder="Se geolocaliser"></ion-input>
+    <!-- <ion-icon name="locate" slot="end" ></ion-icon> -->
+  </ion-item>
+  <br>
+  <div style="text-align: center;" >
+    &
+  </div>
+  <ion-item lines="none">
+    <ion-label  position="floating">Plus de détail</ion-label>
+    <ion-input [(ngModel)]="livraison.detail" type="text" placeholder="akpakpa"></ion-input>
+  </ion-item>
+  <br>
+  <div class="footer-btn" >
+    <ion-button class="outline-btn gradient-btn" expand="block" (click)="valider()" >Valider</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,41 @@
+
+<ion-content>
+  <div class="validation">
+    <div class="background">
+      <div>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+          <h5>Creation de compte</h5>
+          <h3>Client : Particuliers</h3>
+        </ion-title>
+      </div>
+    </div>
+    <div id="container">
+      <ion-progress-bar value="0.8"></ion-progress-bar>
+      <p>Veuillez entrer le code de validation</p>
+      <div class="cases">
+        <ion-input  id="ip1"(input)="inputChange($event.target.value, 1)"  type="number" max="1"></ion-input>
+          <ion-input id="ip2" (input)="inputChange($event.target.value, 2)" type="number" max="1"></ion-input>
+          <ion-input id="ip3" (input)="inputChange($event.target.value, 3)" type="number" max="1"></ion-input>
+          <ion-input id="ip4" (input)="inputChange($event.target.value, 4)" type="number" max="1"></ion-input>
+          <ion-input id="ip5" (input)="inputChange($event.target.value, 5)" type="number" max="1"></ion-input>
+
+      </div>
+
+      <div class="footer-btn">
+        <ion-button class="outline-btn gradient-btn" expand="block" [routerLink]="['/tabs']"
+          routerLinkActive="router-link-active">Créer le compte</ion-button>
+
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Je n'ai pas reçu le code
+        <strong routerLinkActive="router-link-active">Renvoyer</strong>
+      </p>
+
+    </div>
+  </div>
+</ion-content>

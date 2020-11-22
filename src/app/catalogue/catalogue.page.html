@@ -1,0 +1,40 @@
+<ion-header >
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button  >
+        <img src="../../assets/images/favicon0.png" >
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Rechercher un produit" ></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button  >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="ellipsis-vertical-outline" color="light" ></ion-icon>      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-select [(ngModel)]="selectedCat" [value]="selectedCat.name" placeholder="Categories" class="custom-select" interface="popover">
+      <ion-select-option *ngFor="let item of categories" [value]="item.name" >{{item.name}}</ion-select-option>
+    </ion-select>
+
+    <div class="list">
+      <ion-grid>
+        <ion-row >
+          <ion-col size="6" *ngFor="let item of produits">
+            <div (click)="add(item)" class="product-card"  >
+              <img [src]="item.img" alt="" srcset="">
+              <div class="name-icon">
+                <span class="product-name">{{item.name}}</span> <ion-icon name="bag-handle-outline" ></ion-icon>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

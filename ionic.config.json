@@ -1,0 +1,7 @@
+{
+  "name": "xdrink",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

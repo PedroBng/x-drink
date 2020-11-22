@@ -1,0 +1,51 @@
+<ion-content>
+
+  <div class="background">
+    <div>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <h5>Creation de compte</h5>
+        <h3>Livreur</h3>
+      </ion-title>
+    </div>
+  </div>
+    <div id="container">
+      <ion-list>
+        <ion-item lines="none">
+          <ion-label position="stacked">Nom</ion-label>
+          <ion-input type="text" placeholder="Entrer votre nom"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="stacked">Prénom</ion-label>
+          <ion-input type="text" placeholder="Entrer votre prénom"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Numéro</ion-label>
+          <ion-input type="tel" placeholder="numéro tel du gérant"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Carte d'identité</ion-label>
+          <ion-input type="text" placeholder="Numéro de la carte d'identité valide"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="stacked" class="ion-no-border">Moyen de livraison </ion-label>
+          <ion-select  placeholder="Moyen de ">
+           <ion-select-option value="">2Roues</ion-select-option>
+           <ion-select-option value="">3Roues</ion-select-option>
+           <ion-select-option value="">4Roues</ion-select-option>
+           <ion-select-option value="">+4Roues</ion-select-option>
+          </ion-select>
+         </ion-item>
+       
+      </ion-list>
+      <p class="footer-btn" >
+        <ion-button class="outline-btn gradient-btn" expand="block" routerLink="/validation-livreur" routerLinkActive="router-link-active">Créer le compte</ion-button>
+      </p>
+      
+    </div>
+  </ion-content>
+  
+  
+  

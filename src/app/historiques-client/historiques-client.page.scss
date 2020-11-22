@@ -1,0 +1,39 @@
+.title{
+    display: inline-block;
+    color: var(--ion-color-secondary);
+    margin: 10px;
+    font-size: 20px;
+}
+
+.commande{
+    .date{
+        color: var(--ion-color-secondary);margin-bottom: 5px;
+    }
+    margin-bottom: 25px;
+    .commande-content{
+        border-radius: 10px;
+        background-color: #F6F6F6;
+        padding: 10px;
+    }
+}
+.livraison-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    padding-right: 7px;
+
+    .status{
+        margin-right: 7px;
+    }
+}
+
+ion-button{
+    --border-radius: 7px;
+    color: var(--ion-color-primary);
+    --background: white;
+    font-size: 9px;
+    width: 70px;
+    height: 30px;
+    align-self: flex-end;
+}

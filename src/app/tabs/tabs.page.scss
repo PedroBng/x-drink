@@ -1,0 +1,11 @@
+.active{
+    padding: 7px;
+    border-radius: 7px;
+    background: transparent linear-gradient(180deg, #E6A930 0%, #E77F34 56%, #E85E37 100%) 0% 0% no-repeat padding-box;
+    color: white !important;
+}
+
+ion-tab-button {
+    --color	: var(--ion-color-primary-shade);
+    --color-focused	: yellow;
+}

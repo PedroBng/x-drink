@@ -1,0 +1,35 @@
+<ion-tabs (ionTabsDidChange)="changed($event)">
+
+  <ion-tab-bar slot="bottom" >
+    <ion-tab-button tab="accueil">
+       <span *ngIf="isActive(TABS.ACCUEIL)" class="active">
+         <ion-icon name="home-outline"></ion-icon> Accueil
+        </span>
+        <ion-icon *ngIf="!isActive(TABS.ACCUEIL)" name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="catalogue">
+      <span *ngIf="isActive(TABS.CATALOGUE)" class="active">
+        <ion-icon name="calendar-outline"></ion-icon> Catalogue
+       </span>
+      <ion-icon *ngIf="!isActive(TABS.CATALOGUE)" name="calendar-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="panier">
+      <span *ngIf="isActive(TABS.PANIER)" class="active">
+        <ion-icon name="briefcase-outline"></ion-icon> Panier
+       </span>
+      <ion-icon *ngIf="!isActive(TABS.PANIER)" name="briefcase-outline"></ion-icon>
+      <span class="notif"> {{panier}} </span>
+
+    </ion-tab-button>
+
+    <ion-tab-button tab="profil">
+      <span *ngIf="isActive(TABS.PROFILE)" class="active">
+        <ion-icon name="person-outline"></ion-icon> Profil
+       </span>
+      <ion-icon *ngIf="!isActive(TABS.PROFILE)" name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

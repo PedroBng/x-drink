@@ -1,0 +1,25 @@
+<ion-header >
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button  >
+        <img src="assets/images/favicon0.png" >
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Rechercher un produit" ></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/notifications-client']" routerLinkActive="router-link-active"   >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+        <span class="notif" >4</span>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button color="light" menu="client"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card">
+    <img src="https://picsum.photos/200" alt="" srcset="">
+  </div>
+</ion-content>

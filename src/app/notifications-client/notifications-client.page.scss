@@ -1,0 +1,17 @@
+ion-toolbar{
+    --background: #E85E37;
+}
+ion-toolbar ion-icon, ion-menu-button{
+     color: white;
+}
+ion-searchbar{
+    color: #0000;
+    --placeholder-color: #000;
+    --icon-color: #000;
+    padding: 0;
+    --border-radius: 10px;
+    
+}
+ion-title{
+    color: #FFFF;
+}

@@ -1,0 +1,35 @@
+<div class="background">
+  <div>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <h5>Connexion</h5>
+      <h3>Ravi de te revoir</h3>
+    </ion-title>
+  </div>
+</div>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none" >
+      <ion-label  position="stacked">Numero ou Email</ion-label>
+      <ion-input [(ngModel)]="login.email" type="text" placeholder="+229 NN NN NN NN"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Mot de passe</ion-label>
+      <ion-input [(ngModel)]="login.password" type="password" placeholder="*********"></ion-input>
+    </ion-item>
+  </ion-list>
+  <span>Mot de passe Oublié</span>
+
+  <span> {{errorMessage}} </span>
+</ion-content>
+
+<div class="footer">
+  <ion-button (click)="soumettre2()" class="outline-btn gradient-btn"  >Se Connecter</ion-button>
+    <p>
+      Vous n'avez pas un compte ?
+      <span routerLink="/type-inscription" routerLinkActive="router-link-active">CRER UN COMPTE</span>
+    </p>
+</div>

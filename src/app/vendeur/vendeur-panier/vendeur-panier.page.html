@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications" routerLink="/notifications-client"></ion-icon>
+      <ion-menu-button menu="client"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title><strong>Mon panier</strong></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <strong class="num-commande" >Commande N 12547</strong>
+    <br>
+    <div *ngFor="let item of [1,2,3]" class="cart-element">
+      <div class="left">
+        <img src="https://picsum.photos/200" alt="" srcset="">
+        <div class="product-name">
+          <strong>Nom du produit</strong>
+          <span class="buttons" >
+            <strong>5 Unités</strong>
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <strong class="amount" >500</strong>
+      </div>
+    </div>
+    <br>
+    <div style="border:1px dashed rgb(139, 139, 139); border-bottom: 1px solid dashed; height: 2px; width: 100%; margin-top: 5px; margin-bottom: 5px;" ></div>
+    <br>
+    <div class="total">
+      <div class="total-left">
+        <strong class="total">Total <strong class="total-amount" >2500 Fr</strong></strong>
+        <strong class="total">Livreur <strong class="livreur" >Heloto GUABA</strong></strong>
+
+      </div>
+      <ion-button class="outline-btn gradient-btn">LIVRER</ion-button>
+    </div>
+  </div>
+
+</ion-content>

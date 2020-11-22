@@ -1,0 +1,55 @@
+<ion-header >
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button  >
+        <img src="assets/images/favicon0.png" >
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Rechercher un produit" ></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/notifications-client']" routerLinkActive="router-link-active"   >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+        <span class="notif" >4</span>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button color="light" menu="client"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+    <div class="card">
+      <img src="https://picsum.photos/200" alt="" srcset="">
+    </div>
+
+    <div class="horizontal-slide">
+      <ion-slides [options]="sliderOpts">
+        <ion-slide *ngFor="let item of categories" (click)="gotoCat(item)" >
+          <div class="little-card">
+            <!-- <ion-icon name="wine" ></ion-icon> -->
+            <img [src]="item.img" alt="" srcset="">
+          </div>
+          <span class="little-card-title">{{item.name}}</span>
+
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <h4 class="section-title" > Les plus vendus</h4>
+
+    <ion-grid>
+      <ion-row >
+        <ion-col size="6" *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+          <div class="product-card"  >
+            <img src="https://picsum.photos/200" alt="" srcset="">
+            <span class="product-name">Nom du produit</span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

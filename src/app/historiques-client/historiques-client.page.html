@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <img src="assets/images/favicon0.png" >
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications-outline" routerLink="/notifications-client"></ion-icon>
+      <ion-menu-button menu="client"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-searchbar placeholder="Rechercher une commande"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+<div class="content">
+  <div style="text-align: center;" >
+    <strong class="title" >Historique des commandes</strong>
+  </div>
+  <br><br>
+
+  <div *ngFor="let item of [1,2,3]" class="commande">
+    <div class="date">
+      <strong>12/5/2020 - 12:30</strong>
+    </div>
+    <div class="contenue">
+      <div class="commande-content">
+        <div *ngFor="let item of [1,2]" class="livraison-element">
+          
+          <span class="cmd">Cmd #12368</span>
+          <div>
+            <strong *ngIf="item%2==0" class="status" style="color: red;" >En attente</strong>
+            <strong *ngIf="item%2!=0" class="status" style="color: green;">Reçu</strong>
+            <ion-button [routerLink]="['/historique-detail']" routerLinkActive="router-link-active"  class="gradient-btn">Voir</ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</ion-content>

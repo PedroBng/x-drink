@@ -1,0 +1,52 @@
+
+<ion-content [fullscreen]="true">
+  <div class="background">
+    <div>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <h5>Creation de compte</h5>
+        <h3>Créer un compte client</h3>
+      </ion-title>
+    </div>
+  </div>
+  
+  <div id="container">
+    <ion-progress-bar  value="0.6"></ion-progress-bar>
+    <ion-list>
+      <ion-item lines="none" routerLink="/inscription-bar-client">
+        <ion-img src="../assets/images/bar.png"></ion-img>
+        <ion-label slot="end">
+          Bar/Buvette
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none" routerLink="/inscription-hotel-client">
+        <ion-img src="../assets/images/hotel.png"></ion-img>
+        <ion-label slot="end">
+          Hôtels
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none" routerLink="/inscription-particulier-client">
+        <ion-img src="../assets/images/particulier.png"></ion-img>
+        <ion-label slot="end">
+          Particuliers
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="footer">
+    <p>
+      Vous avez déjà un compte ?
+      <span routerLink="/connexion-client">SE CONNECTER</span>
+    </p>
+  </div>
+</ion-content>
+
+
+
+

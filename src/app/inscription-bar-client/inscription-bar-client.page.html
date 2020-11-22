@@ -1,0 +1,60 @@
+<ion-content>
+
+<div class="background">
+  <div>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <h5>Creation de compte</h5>
+      <h3>Client : Bar / Buvette</h3>
+    </ion-title>
+  </div>
+</div>
+  <div id="container">
+    <ion-progress-bar  value="0.8"></ion-progress-bar>
+    
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label position="stacked">Nom du Bar/Buvette</ion-label>
+        <ion-input [(ngModel)]="dataBar.nom_depot" type="text" placeholder="nom du dépôt"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label position="stacked">Nom du gérant</ion-label>
+        <ion-input [(ngModel)]="dataBar.nom_gerant" type="text" placeholder="nom du gérant"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Numéro tel du gérant</ion-label>
+        <ion-input [(ngModel)]="dataBar.telephone_gerant" type="tel" placeholder="numéro tel du gérant"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email du gérant</ion-label>
+        <ion-input [(ngModel)]="dataBar.email" type="email" placeholder="fxgerant@gmail.com"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">IFU <span>Optionnel</span></ion-label>
+        <ion-input [(ngModel)]="dataBar.ifu" type="number" placeholder="00 00 00 00 00 00 00 00"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Adresse de livraison</ion-label>
+        <ion-input [(ngModel)]="dataBar.adresse_livraison" type="text" placeholder="quartier ville"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Mot de passe</ion-label>
+        <ion-input [(ngModel)]="dataBar.password" type="password" placeholder="**********"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Confirmer le mot de passe</ion-label>
+        <ion-input [(ngModel)]="dataBar.password2" type="password" placeholder="**********"></ion-input>
+      </ion-item>
+    </ion-list>
+    <p class="footer-btn" >
+      <ion-button class="outline-btn gradient-btn" (click)="soumettre()" expand="block" >Créer le compte</ion-button>
+    </p>
+
+    <span> {{errorMessage}}  </span>
+    
+  </div>
+</ion-content>
+
+

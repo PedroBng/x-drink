@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications-outline" routerLink="/notifications-client"></ion-icon>
+      <ion-menu-button menu="client"></ion-menu-button>
+    </ion-buttons>
+    <ion-title> <strong>Com N 00123654</strong> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="header">
+    <img src="https://images.frandroid.com/wp-content/uploads/2016/04/google-maps-multi-itineraire-1000x597.jpg" alt="" srcset="">
+  </div>
+  <div class="content">
+    <div class="bravo">
+
+      <!-- <div class="trajet">
+        <div class="line">
+          <span class="round grey"></span>
+          <span class="text ">Commande livrée</span>
+        </div>
+        <br>
+        <div class="line">
+          <span class="round green"></span>
+          <span class="text step-done">Commande en attente </span>
+        </div>
+        <div class="line">
+          <span class="round green"></span>
+          <span class="text step-done">LIvreur a reçu la commande </span>
+        </div>
+        <div class="line">
+          <span class="round green"></span>
+          <span class="text step-done">LIvreur chez vendeur </span>
+        </div>
+      </div> -->
+
+      <table class="trajet" >
+        <tr class="line" >
+          <td>
+            <span class="round grey"></span>
+          </td>
+          <td>
+            <span class="text">Commande Livrée </span>
+          </td>
+        </tr>
+
+        <tr class="line" >
+          <td>
+            <span class="round green"></span>
+          </td>
+          <td>
+            <span class="text step-done">Commande en attente </span>
+          </td>
+        </tr>
+
+        <tr class="line" >
+          <td>
+            <span class="round green"></span>
+          </td>
+          <td>
+            <span class="text step-done">LIvreur a reçu la commande </span>
+          </td>
+        </tr>
+
+        <tr class="line" >
+          <td>
+            <span class="round green"></span>
+          </td>
+          <td>
+            <span class="text step-done">Livreur chez vendeur </span>
+            <br>
+            <span class="text"> Livreur AHPO Irene</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="contenue">
+      <div class="title" >
+          <strong>Contenue commande</strong></div>
+      <div class="commande">
+        <div *ngFor="let item of [1,2,3]" class="cart-element">
+          <div class="left">
+            <img style="height: 50px; width: 50px;" src="https://picsum.photos/200" alt="" srcset="">
+            <div class="product-name">
+              <span>Jus de fruit</span>
+              <span class="buttons" >
+                5 unité
+              </span>
+            </div>
+          </div>
+          <div class="right">
+            <strong class="amount" >500</strong>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</ion-content>

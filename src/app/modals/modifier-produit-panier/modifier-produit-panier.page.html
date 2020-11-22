@@ -1,0 +1,62 @@
+
+
+<ion-content>
+  
+  <div class="content" style="padding: 20px;" >
+    <div style="text-align: end;" >
+      <span (click)="dissmiss()" >X</span>
+    </div>
+    <strong class="title" > {{nom_produit}} </strong><div class="list">
+      
+      <br>
+      <div  class="detail">
+        <div style="margin-left: 20px;" >
+          Quantité <br>
+          <div class="product-name">
+              <span class="buttons">
+                <ion-badge (click)="qty = qty > 0 ?qty-1:0" >-</ion-badge>
+                <strong> {{qty}} </strong>
+                <ion-badge (click)="qty = qty+1" >+</ion-badge>
+              </span>
+            </div></div>
+       
+
+        <ion-row>
+          <ion-col size="5">
+            <ion-item lines="none">
+              <ion-label position="floating">Prix unitaire</ion-label>
+              <ion-input [(ngModel)]="prix_unitaire" type="tel" placeholder="2000"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="7">
+            <ion-item lines="none">
+              <ion-label position="floating">Unité</ion-label>
+              <ion-select [(ngModel)]="unite" >
+                <ion-select-option value='casier' >Casier</ion-select-option>
+                <ion-select-option value='canette'>Canette</ion-select-option>
+                <ion-select-option value='autre'>Autres</ion-select-option>
+
+
+              </ion-select>
+            </ion-item>
+
+            <!-- <ion-item lines="none">
+              <ion-label>Date de livraison</ion-label>
+              <ion-datetime displayFormat="MM DD YY"></ion-datetime>
+            </ion-item> -->
+          </ion-col>
+         
+        </ion-row>
+      </div>
+      
+    </div>
+
+
+  </div>
+
+  
+  <br>
+  <div class="footer-btn" >
+    <ion-button class="outline-btn gradient-btn" expand="block" (click)="valider('')" >Valider</ion-button>
+  </div>
+</ion-content>

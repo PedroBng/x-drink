@@ -1,0 +1,81 @@
+
+
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title color="light" ><strong>Livraison</strong></ion-title>
+    <ion-buttons slot="end">
+      <ion-button  >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="ellipsis-vertical-outline" color="light" ></ion-icon>      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="slide">
+    <div class="bg">
+      <img class="front-img" src="assets/images/drinking.png">
+      <img class="back-img" src="assets/images/Component.png" >
+    </div>
+  </div>
+    <div id="container">
+     
+      <ion-list>
+        <ion-item lines="none">
+          <ion-label position="floating">Prix total</ion-label>
+          <ion-input disabled [(ngModel)]="total" type="text" placeholder="2500"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col size="5">
+            <ion-item lines="none">
+              <ion-label position="floating">Heure</ion-label>
+              <!-- <ion-input type="tel" placeholder="hh:mm"></ion-input> -->
+              <ion-datetime cancelText="Annuler" doneText="Ok" displayFormat="hh:mm"></ion-datetime>
+
+            </ion-item>
+          </ion-col>
+          <ion-col size="7">
+            <ion-item lines="none">
+              <ion-label position="floating">Date de livraison</ion-label>
+              <!-- <ion-input type="text" placeholder="JJ/MM/AAAA"></ion-input> -->
+              <ion-datetime cancelText="Annuler" doneText="Ok"
+              displayFormat="DD/MM/YYYY"></ion-datetime>
+
+            </ion-item>
+
+            <!-- <ion-item lines="none">
+              <ion-label>Date de livraison</ion-label>
+              <ion-datetime displayFormat="MM DD YY"></ion-datetime>
+            </ion-item> -->
+          </ion-col>
+         
+        </ion-row>
+        <ion-item (click)="livraison()" lines="none">
+          <ion-label  position="floating">Lieu de livraison</ion-label>
+          <ion-input [(ngModel)]="livraisonAddress.detail" type="text" placeholder="akpakpa"></ion-input>
+        </ion-item>
+        <ion-item (click)="paiement()" lines="none">
+          <ion-label position="floating">Moyen de paiement</ion-label>
+          <ion-input [(ngModel)]="moyen_de_paiement" type="text" placeholder="mobile money"></ion-input>
+        </ion-item>
+      </ion-list>
+      <br>
+      <div class="dashed-line"></div>
+      <p style="text-align: center;" >
+        <strong>Frais de libraison : 500</strong>
+      </p>
+      <p style="text-align: center;" >
+        <strong>Frais Total : {{500 + total}} </strong>
+      </p>
+      <br>
+      <p class="footer-btn" >
+        <ion-button class="outline-btn gradient-btn" expand="block" (click)="commander()" >Commander</ion-button>
+      </p>
+      
+    </div>
+  </ion-content>
+  
+  
+  

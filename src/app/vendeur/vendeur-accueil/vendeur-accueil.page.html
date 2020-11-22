@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title color="light" ><strong>Demande de vente</strong></ion-title>
+    <ion-buttons slot="end">
+      <ion-button  >
+        <ion-icon name="notifications" color="light" ></ion-icon>
+      </ion-button>
+      <ion-button (click)="commandes.push(1)"  >
+        <ion-icon name="ellipsis-vertical-outline" color="light" ></ion-icon>      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="content">
+    <div *ngIf="commandes.length == 0" class="empty">
+      <div class="empty-order">
+        <ion-icon name="basket"></ion-icon>
+        <span><strong>Vous n'avez aucune commande en attente</strong></span>
+      </div>
+  
+      <div class="empty-order-btns">
+        <ion-button [routerLink]="['/code-de-vente']" routerLinkActive="router-link-active"  >VENDRE</ion-button>
+        <ion-button [routerLink]="['/vendeur-tabs/catalogue']" routerLinkActive="router-link-active"  class="clear" >ACHETER</ion-button>
+      </div>
+    </div>
+
+    <div *ngIf="commandes.length != 0" class="no-empty">
+      <div class="btns">
+        <ion-button [routerLink]="['/vendeur-tabs/catalogue']" routerLinkActive="router-link-active" >ACHETER</ion-button>
+        <ion-button>VENDRE</ion-button>
+      </div>
+  
+      <div class="demande">
+        <div class="header">
+          <strong class="title">Demandes de vente</strong>
+        </div>
+  
+        <div style="padding: 5px;" >
+          <div *ngFor="let item of commandes" class="commande">
+            <div class="left">
+              <strong>1 commande</strong>
+              <span>il y a 12 min</span>
+            </div>
+            <div class="right">
+              <strong>ACCEPTER</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

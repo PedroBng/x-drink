@@ -1,0 +1,16 @@
+.buttons{
+    strong{
+        width: 100px;
+        border-radius: 10px;
+        background-color: rgb(255, 203, 203);
+        text-align: center;
+        padding: 6px;
+        color: var(--ion-color-secondary);
+        margin-top: 5px;
+    }
+}
+
+.num-commande{
+    display: inline-block;
+    margin-bottom: 10px;
+}

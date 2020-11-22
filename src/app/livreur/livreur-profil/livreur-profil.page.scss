@@ -1,0 +1,72 @@
+.profile-info{
+    margin-top: 45px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .names{
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        .name{
+            color: var(--ion-color-secondary);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+}
+
+ion-button{
+    --border-radius: 7px;
+    color: var(--ion-color-primary);
+    --background: white;
+    font-size: 11px;
+    width: 80px;
+    height: 30px;
+    align-self: flex-end;
+}
+
+.livraison-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    padding-right: 7px;
+
+    .status{
+        margin-right: 7px;
+    }
+}
+
+.commandes{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 7px;
+
+    .header{
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        background-color: var(--ion-color-secondary);
+
+        .title{
+            padding: 5px;
+            align-self: center;
+            color: white;
+        }
+    }
+}
+
+.menu-item{
+    padding: 15px;
+    color: var(--ion-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    font-size: 17px;
+    
+    ion-icon{
+        margin-right: 10px;
+    }
+}
